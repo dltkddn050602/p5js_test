@@ -138,7 +138,8 @@ function setup() {
   c.style('-webkit-user-select', 'none');
 
   // 화면 크기 조절
-  c.style('max-width', '100%');
+  // 비율 유지하면서 창 크기에 맞게 확대/축소
+  c.style('width', 'min(100vw, calc(100vh * 844 / 500))');
   c.style('height', 'auto');
 
   textFont('sans-serif');
